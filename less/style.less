@@ -1,0 +1,95 @@
+/* CONFIGURATION *******************************************************************/
+
+// COLORS
+@body-background-color:#DDD;
+@body-color:#333;
+
+@a-link-color: #00F;
+@a-hover-color: #0DF;
+@a-active-color: #3DF;
+
+@border-color: #CCC;
+
+// FONT-TEXTS
+@font-family: sans-serif;
+@font-family-secondary: sans-serif;
+@font-family-titles: sans-serif;
+
+@font-size:14px;
+@font-size-max:50px;
+@font-size-delta:2;
+@line-height: 1.4em;
+
+@text-margin-bottom: 20px;
+
+// LAYOUT
+@border-width: 1px;
+@max-width: 1200px;
+@padding-layout: 20px;
+
+
+/* FUNCTIONS *******************************************************************/
+.font(@selector: 7, @scale: 1) {
+	@factor: (7 - @selector) / 6;
+	@foo: @scale * (@factor * @factor * (@font-size-max - @font-size) + @font-size);
+	font-size: @foo;
+	line-height: @line-height;
+	margin-bottom: @text-margin-bottom;
+}
+.border-radius(@radius: 5px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+/* Clearfix */
+.clearfix:before,.clearfix:after{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}
+
+/* Basic *******************************************************************/
+body{
+	background-color: @body-background-color;
+	color:@body-color;
+	.font();
+	font-family: @font-family;
+	margin-bottom: 0;
+}
+.h1,h1{
+	.font(1);
+	font-family: @font-family-titles;
+}
+.h2,h2{
+	.font(2);
+	font-family: @font-family-titles;
+}
+.h3,h3{
+	.font(3);
+	font-family: @font-family-titles;
+}
+.h4,h4{
+	.font(4);
+	font-family: @font-family-titles;
+}
+.h5,h5{
+	.font(5);
+	font-family: @font-family-titles;
+}
+.h6,h6{
+	.font(6);
+	font-family: @font-family-titles;
+	font-weight:bold;
+}
+
+
+hr{
+	background-color: @border-color;
+	height: @border-width;
+	border:none;
+	margin-bottom: @text-margin-bottom;
+}
+
+/* Layout **********************************************************************************/
+.container{
+	max-width: @max-width + 2 * @padding-layout;margin:0 auto;
+	padding-left: @padding-layout;
+	padding-right: @padding-layout;
+	.clearfix;
+}
