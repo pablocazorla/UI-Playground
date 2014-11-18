@@ -10,14 +10,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<script src="js/libs/html5-3.4-respond-1.1.0.min.js"></script>
 		
-		<!-- CSS -->
+		<!-- CSS 
 		<link type="text/css" rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet/less" type="text/css" href="less/style.less"/>
-		<link type="text/css" rel="stylesheet" href="css/page.css">
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+		-->
+		<link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.css">
+		<link type="text/css" rel="stylesheet" href="xbootstrap/css/bootstrap-theme.css">
 	</head>
 	<body>
 		<div class="container">
-			<div class="page content">
+			<div class="page">
 				<h1>Playground</h1>
 				<hr>
 				<h1>Header 1</h1>
@@ -89,7 +91,7 @@
 					<li>Donec scelerisque, risus venenatis vehicula pulvinar, lorem nisl vestibulum dui, vel hendrerit nisl purus eget tortor.</li>
 				</ol>
 				<p>Paragraph. Fusce ac neque tristique, bibendum dui quis, bibendum nibh. Proin iaculis egestas orci, sed feugiat orci congue volutpat. Vestibulum in pulvinar mauris. Phasellus tempus risus eleifend, vulputate dolor iaculis, mattis felis. Curabitur lacinia sollicitudin purus, vel scelerisque velit aliquam sit amet. Vestibulum augue nisi, cursus quis ante eu, feugiat interdum neque.</p>
-				<table>
+				<table class="table">
 					<thead>
 						<tr>
 							<th>Attribute</th><th>Description</th>
@@ -164,10 +166,23 @@ utils.cssfix = (function() {
 	}
 })();</pre>
 				<p>Paragraph. Fusce ac neque tristique, bibendum dui quis, bibendum nibh. Proin iaculis egestas orci, sed feugiat orci congue volutpat. Vestibulum in pulvinar mauris. Phasellus tempus risus eleifend, vulputate dolor iaculis, mattis felis. Curabitur lacinia sollicitudin purus, vel scelerisque velit aliquam sit amet. Vestibulum augue nisi, cursus quis ante eu, feugiat interdum neque.</p>
+				<hr/>
+				<h2>Buttons</h2>
+				<h5>Normal</h5>
+				<button>Button</button><a href="" class="btn btn-default">Button</a><input type="submit" value="Button"/>				
+				<button disabled>Button</button><a href="" class="button disabled" disabled>Button</a><input type="submit" value="Button" disabled/>
+				<h5>Principal</h5>
+				<button class="principal">Button</button><a href="" class="button principal">Button</a><input type="submit" value="Button" class="principal"/>
+				<button class="principal" disabled>Button</button><a href="" class="button principal disabled">Button</a><input type="submit" value="Button" class="principal" disabled/>
+				<h5>Destructive</h5>
+				<button class="destructive">Button</button><a href="" class="button destructive">Button</a><input type="submit" value="Button" class="destructive"/>
+				<button class="destructive" disabled>Button</button><a href="" class="button destructive disabled">Button</a><input type="submit" value="Button" class="destructive" disabled/>
+
+
+
 
 			</div>
 		</div>
-		<script src="js/libs/less-1.7.5.min.js"></script>
 		<script src="js/libs/jquery-1.9.1.min.js"></script>
 		<script src="js/app.js"></script>
 	</body>

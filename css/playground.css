@@ -1,0 +1,25 @@
+body{
+  background-color: #DDD;
+}
+#pg-page{
+  margin: 40px;padding:40px;
+  background-color: #FFF;
+  box-shadow: 0 3px 9px rgba(0,0,0,.5);
+  min-height: 1000px;
+}
+
+.pg-row:before,.pg-row:after{content:"";display:table}.pg-row:after{clear:both}.pg-row{zoom:1}
+.pg-row{
+  padding-bottom: 20px;margin-bottom: 20px;border-bottom: dotted 1px #999;
+}
+.pg-col{
+  float:left;width: 44%;padding-left:3%;
+}
+.pg-col:first-child{
+  float:left;width: 50%;padding-left:0;padding-right:3%;border-right: dotted 1px #999;
+  min-height: 300px;
+}
+
+pre{
+  white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word
+}
